@@ -1,0 +1,46 @@
+cmd-line-input: for a in $(seq 0 8); do python bin/generate_candidates.py -m unique -c $a -mix Nb Ta -sc 2 2 2 --calc_path calc/tmp ; done
+cmd-line-output: 
+
+cmd-line-input: cp -r calc/tmp/ calc/calc_8_5_3_2_0 && cp -r calc/tmp/ calc/calc_7_4_2_1_0 && rm -rf calc/tmp
+cmd-line-output: 
+
+cmd-line-input:python bin/generate_correlations.py -d 8 5 3 2 0 --calc_path calc/calc_8_5_3_2_0
+cmd-line-output: #example for one of the concentrations
+Generating correlations for calc/calc_8_5_3_2_0/sqs_01
+...
+
+cmd-line-input:python bin/generate_correlations.py -d 7 4 2 1 0 --calc_path calc/calc_7_4_2_1_0
+cmd-line-output:
+Generating correlations for calc/calc_7_4_2_1_0/sqs_06
+...
+
+cmd-line-input:python bin/compare_correlations.py --calc_path calc/calc_7_4_2_1_0
+cmd-line-output:
+
+Number of sqs: 		1
+Number of clusters: 	6 (including the point cluster)
+
+1 Error functions corresponding to the input SQS where saved to 'errors.out'.
+...
+
+cmd-line-input:python bin/compare_correlations.py --calc_path calc/calc_8_5_3_2_0
+cmd-line-output:
+Number of sqs: 		1
+Number of clusters: 	7 (including the point cluster)
+
+1 Error functions corresponding to the input SQS where saved to 'errors.out'.
+...
+
+cmd-line-input:python bin/select_sym_best.py -b 3 -w --calc_path calc/calc_8_5_3_2_0
+cmd-line-output:
+calc/calc_8_5_3_2_0/sqs_00/unique_errors.out
+...
+
+
+cmd-line-input:python bin/select_sym_best.py -b 3 -w --calc_path calc/calc_7_4_2_1_0
+cmd-line-output:
+calc/calc_7_4_2_1_0/sqs_00/unique_errors.out
+...
+
+cmd-line-input:python bin/generate_output.py -b 3 -m --path calc --supercell 2 0 0 0 2 0 0 0 2
+cmd-line-output:

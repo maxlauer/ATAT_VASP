@@ -1,0 +1,85 @@
+strain=
+1.00000 0.00000 0.00000 
+0.00000 1.00000 0.00000 
+0.00000 0.00000 1.00000 
+
+Nb atom at 2.00041 2.00041 2.00041 mapped onto lattice site at 2.00041 2.00041 2.00041 distance= 0.00000
+Ta atom at 1.00041 1.00041 1.00041 mapped onto lattice site at 1.00041 1.00041 1.00041 distance= 0.00000
+Ta atom at 0.50041 0.50041 0.50041 mapped onto lattice site at 0.50041 0.50041 0.50041 distance= 0.00000
+Nb atom at 0.50041 0.50041 1.50041 mapped onto lattice site at 0.50041 0.50041 1.50041 distance= 0.00000
+Nb atom at 0.50041 1.50041 0.50041 mapped onto lattice site at 0.50041 1.50041 0.50041 distance= 0.00000
+Ta atom at 1.50041 0.50041 0.50041 mapped onto lattice site at 1.50041 0.50041 0.50041 distance= 0.00000
+Nb atom at 1.50041 0.50041 1.50041 mapped onto lattice site at 1.50041 0.50041 1.50041 distance= 0.00000
+Nb atom at 1.50041 1.50041 0.50041 mapped onto lattice site at 1.50041 1.50041 0.50041 distance= 0.00000
+Nb atom at 1.50041 1.50041 1.50041 mapped onto lattice site at 1.50041 1.50041 1.50041 distance= 0.00000
+Nb atom at 2.00041 1.00041 2.00041 mapped onto lattice site at 2.00041 1.00041 2.00041 distance= 0.00000
+Nb atom at 1.00041 1.00041 2.00041 mapped onto lattice site at 1.00041 1.00041 2.00041 distance= 0.00000
+Nb atom at 2.00041 1.00041 1.00041 mapped onto lattice site at 2.00041 1.00041 1.00041 distance= 0.00000
+Nb atom at 0.50041 1.50041 1.50041 mapped onto lattice site at 0.50041 1.50041 1.50041 distance= 0.00000
+Nb atom at 2.00041 2.00041 1.00041 mapped onto lattice site at 2.00041 2.00041 1.00041 distance= 0.00000
+Nb atom at 1.00041 2.00041 2.00041 mapped onto lattice site at 1.00041 2.00041 2.00041 distance= 0.00000
+Nb atom at 1.00041 2.00041 1.00041 mapped onto lattice site at 1.00041 2.00041 1.00041 distance= 0.00000
+Li atom ignored at 0.28189 0.28189 0.28189
+Li atom ignored at 0.28189 0.28189 1.28189
+Li atom ignored at 0.28189 1.28189 0.28189
+Li atom ignored at 0.28189 1.28189 1.28189
+Li atom ignored at 1.28189 0.28189 0.28189
+Li atom ignored at 1.28189 0.28189 1.28189
+Li atom ignored at 1.28189 1.28189 0.28189
+Li atom ignored at 1.28189 1.28189 1.28189
+Li atom ignored at 0.78189 0.78189 0.78189
+Li atom ignored at 0.78189 0.78189 1.78189
+Li atom ignored at 0.78189 1.78189 0.78189
+Li atom ignored at 0.78189 1.78189 1.78189
+Li atom ignored at 1.78189 0.78189 0.78189
+Li atom ignored at 1.78189 0.78189 1.78189
+Li atom ignored at 1.78189 1.78189 0.78189
+Li atom ignored at 1.78189 1.78189 1.78189
+O atom ignored at 0.10762 0.36329 0.72037
+O atom ignored at 0.10762 0.36329 1.72037
+O atom ignored at 0.10762 1.36329 0.72037
+O atom ignored at 0.10762 1.36329 1.72037
+O atom ignored at 1.10762 0.36329 0.72037
+O atom ignored at 1.10762 0.36329 1.72037
+O atom ignored at 1.10762 1.36329 0.72037
+O atom ignored at 1.10762 1.36329 1.72037
+O atom ignored at 0.72037 0.10763 0.36329
+O atom ignored at 0.72037 0.10763 1.36329
+O atom ignored at 0.72037 1.10763 0.36329
+O atom ignored at 0.72037 1.10763 1.36329
+O atom ignored at 1.72037 0.10763 0.36329
+O atom ignored at 1.72037 0.10763 1.36329
+O atom ignored at 1.72037 1.10763 0.36329
+O atom ignored at 1.72037 1.10763 1.36329
+O atom ignored at 0.36329 0.72038 0.10762
+O atom ignored at 0.36329 0.72038 1.10762
+O atom ignored at 0.36329 1.72038 0.10762
+O atom ignored at 0.36329 1.72038 1.10762
+O atom ignored at 1.36329 0.72038 0.10762
+O atom ignored at 1.36329 0.72038 1.10762
+O atom ignored at 1.36329 1.72038 0.10762
+O atom ignored at 1.36329 1.72038 1.10762
+O atom ignored at 0.86328 0.60762 0.22038
+O atom ignored at 0.86328 0.60762 1.22038
+O atom ignored at 0.86328 1.60762 0.22038
+O atom ignored at 0.86328 1.60762 1.22038
+O atom ignored at 1.86328 0.60762 0.22038
+O atom ignored at 1.86328 0.60762 1.22038
+O atom ignored at 1.86328 1.60762 0.22038
+O atom ignored at 1.86328 1.60762 1.22038
+O atom ignored at 0.22038 0.86328 0.60762
+O atom ignored at 0.22038 0.86328 1.60762
+O atom ignored at 0.22038 1.86328 0.60762
+O atom ignored at 0.22038 1.86328 1.60762
+O atom ignored at 1.22038 0.86328 0.60762
+O atom ignored at 1.22038 0.86328 1.60762
+O atom ignored at 1.22038 1.86328 0.60762
+O atom ignored at 1.22038 1.86328 1.60762
+O atom ignored at 0.60762 0.22038 0.86328
+O atom ignored at 0.60762 0.22038 1.86328
+O atom ignored at 0.60762 1.22038 0.86328
+O atom ignored at 0.60762 1.22038 1.86328
+O atom ignored at 1.60762 0.22038 0.86328
+O atom ignored at 1.60762 0.22038 1.86328
+O atom ignored at 1.60762 1.22038 0.86328
+O atom ignored at 1.60762 1.22038 1.86328

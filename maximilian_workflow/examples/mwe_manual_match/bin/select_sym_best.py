@@ -1,0 +1,1 @@
+/home/mlauer/Documents/work/sanna/atat_workflow/bin/select_sym_best.py
