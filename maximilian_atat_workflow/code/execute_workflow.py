@@ -108,12 +108,15 @@ def main():
 
     # writing the output
     match = ""
+    limited = ""
     if args.match_bool:
         match = " --perform_match "
-    os.system(f"python {args.bin_dir}/{args.output_gen} --input {args.input} --num_best {args.num_best} --output_dir {args.output_dir}{match}--path {args.path}")
-    
-    
+    if args.lim_bool:
+        limited = " --limited "
 
+    print(f"python {args.bin_dir}/{args.output_gen} --input {args.input} --num_best {args.num_best} --output_dir {args.output_dir}{match}--mixing {" ".join(args.mixing)}{limited}--path {args.path}")
+    os.system(f"python {args.bin_dir}/{args.output_gen} --input {args.input} --num_best {args.num_best} --output_dir {args.output_dir}{match}--mixing {" ".join(args.mixing)}{limited}--path {args.path}")
+    
 
 def candidate_gen():
     # generate the candidate structures in a temporary directory

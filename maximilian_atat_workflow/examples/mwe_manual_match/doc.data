@@ -42,5 +42,5 @@ cmd-line-output:
 calc/calc_7_4_2_1_0/sqs_00/unique_errors.out
 ...
 
-cmd-line-input:python bin/generate_output.py -b 3 -m --path calc --supercell 2 0 0 0 2 0 0 0 2
+cmd-line-input:python bin/generate_output.py -b 3 -m -mix Nb Ta -lim --path calc
 cmd-line-output:

@@ -12,6 +12,7 @@ import numpy as np
 from atat_lattice_file import read_in_lat_list, write_lat_list, sqs_list_to_pmg
 from tools import read_out_corr_file
 
+from pymatgen.core.structure import Structure
 from pymatgen.analysis.structure_matcher import StructureMatcher
 
 '''
@@ -35,6 +36,11 @@ def main():
                         help='The path to the directory where the finished \'best_file\' will be printed')
     parser.add_argument('-m', '--perform_match', dest='match_bool', action='store_true',
                         help='Compare the best sqs of the most expansive cluster calc with lower ones to preferably pick those that are the best sqs for multiple cluster amounts')
+    parser.add_argument('-mix', '--mixing_sites', dest='mixing', nargs=2, default=None,
+                        help='Alloying Sites (first argument) and the replacement element')
+    parser.add_argument('-lim', '--limited', dest='lim_bool', action='store_true',
+                        help='Limit Data to generate SQS candidates from to x <= 0.5. This script creates the sqs for x>0.5 by mixing site exchange')
+    
 
     parser.add_argument('--candidate_file', dest='candidate_file', default='sqs.out',
                         help='File to which the sqs candidates are written - Defaults to \'sqs.out\'')
@@ -42,8 +48,6 @@ def main():
                         help='The path of the super-directory where the calculations were performed')
     parser.add_argument('--best_file', dest='out_file', default='best_sqs.out',
                         help='The path of the directory where the calculations are performed')
-    parser.add_argument('-s', '--scorr', dest='sqs_correlation_file', type=str, default='tcorr.out',
-                        help='Name of file containing sqs correlations. Defaults to \'tcorr_final.out\' if omitted.')
     
     parser.add_argument('--seed', dest='seed', default=None,
                         help='randomness seed. default taken from sys parameters')
@@ -68,37 +72,79 @@ def main():
         folders = {folder: eval_cluster_score(f"{args.path}/{folder}/{os.listdir(f"{args.path}/{folder}")[0]}/tcorr.out") for folder in os.listdir(args.path)}
         highest_cluster = max(folders, key = folders.get)
 
-        sqs_list, cand_list = determine_candidates(path             =args.path, 
-                                                   highest_cluster  =highest_cluster,
-                                                   sqs_file         =args.candidate_file
+        sqs_list, cand_list = determine_candidates(path             = args.path, 
+                                                   highest_cluster  = highest_cluster,
+                                                   sqs_file         = args.candidate_file
                                                    )
         
-        perform_match_analysis(out_path=args.output_dir, 
-                               sqs_list=sqs_list, 
-                               cand_list=cand_list, 
-                               num_best=args.num_best, 
-                               max_score=len(folders.keys())
+        perform_match_analysis(out_path     = args.output_dir, 
+                               sqs_list     = sqs_list, 
+                               cand_list    = cand_list, 
+                               num_best     = args.num_best, 
+                               max_score    = len(folders.keys())
                                )
 
     else:
         copy_best_sqs(path=f"{args.path}",
                       sqs_out=args.out_file,
                       out_path=args.output_dir)
-        
-    zip_up_output(to_zip=[f"{args.output_dir}/finished"],
-                  zip_path=f"{args.output_dir}/lat_ins.zip")
 
-def copy_best_sqs(path, sqs_out, out_path):
+    if args.lim_bool:
+        extend_concentration(out_path       = f"{args.output_dir}/finished", 
+                             mixing_sites   = args.mixing,
+                             sqs_out = args.out_file
+                             )
+
+    zip_up_output(to_zip    = f"{args.output_dir}/finished",
+                  zip_path  = f"{args.output_dir}/lat_ins.zip"
+                  )
+
+
+
+def copy_best_sqs(path, sqs_out, out_path): 
     for conc in sorted(os.listdir(path)):
         if not os.path.exists(f'{out_path}/finished/{conc}'):
             os.makedirs(f'{out_path}/finished/{conc}')
 
         shutil.copyfile(f"{path}/{conc}/{sqs_out}", f"{out_path}/finished/{conc}/{sqs_out}")
 
+
+
+def extend_concentration(out_path, mixing_sites, sqs_out):
+    # this should always work, since ther will always be some sqs_out .. if not something else would have to go very wrong
+    sqs_list = read_in_lat_list(f"{out_path}/{sorted(os.listdir(out_path))[0]}/{sqs_out}")
+    structure = sqs_list_to_pmg(sqs_list)[0]
+    mix_num = np.sum([(el.symbol in mixing_sites) for el in structure.species])
+    max_created = int(mix_num / 2)
+
+    for conc in range( max_created + 1 ):
+        new_conc = mix_num - conc
+        src = f"{out_path}/sqs_{conc:0>{len(str(mix_num))}}"
+        dst = f"{out_path}/sqs_{new_conc:0>{len(str(mix_num))}}" 
+
+        if conc == new_conc:
+            continue
+
+        with open(f"{src}/{sqs_out}", 'r') as scr_f:
+            content = scr_f.read()
+        
+        mod_content= (content
+                      .replace(mixing_sites[0], 'XXXX')
+                      .replace(mixing_sites[1], mixing_sites[0])
+                      .replace('XXXX', mixing_sites[1]))
+
+        if not os.path.exists(dst):
+            os.makedirs(dst)
+
+        with open(f"{dst}/{sqs_out}", 'w') as dst_f:
+            dst_f.write(mod_content)
+
+
+
 def zip_up_output(to_zip, zip_path):
     with zipfile.ZipFile(zip_path, 'w') as zipf:
-        for f in to_zip:
-            zipf.write(f)
+        for f in os.listdir(to_zip):
+            zipf.write(f"{to_zip}/{f}")
 
 
 def determine_candidates(path, highest_cluster, sqs_file):

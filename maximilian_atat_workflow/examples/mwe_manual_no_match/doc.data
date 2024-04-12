@@ -6,4 +6,4 @@ cmd-line-input:python bin/compare_correlations.py
 
 cmd-line-input:python bin/select_sym_best.py -b 3
 
-cmd-line-input:python bin/generate_output.py -b 3
+cmd-line-input:python bin/generate_output.py -b 3 -mix Nb Ta -lim
