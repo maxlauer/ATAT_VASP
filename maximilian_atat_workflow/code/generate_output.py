@@ -143,8 +143,12 @@ def extend_concentration(out_path, mixing_sites, sqs_out):
 
 def zip_up_output(to_zip, zip_path):
     with zipfile.ZipFile(zip_path, 'w') as zipf:
-        for f in os.listdir(to_zip):
-            zipf.write(f"{to_zip}/{f}")
+        for root, folders, files in os.walk(to_zip):
+            for f in files:
+                file_path = os.path.join(root, f)
+                arc_name = os.path.relpath(file_path, to_zip)
+
+                zipf.write(file_path, arcname=arc_name)
 
 
 def determine_candidates(path, highest_cluster, sqs_file):
