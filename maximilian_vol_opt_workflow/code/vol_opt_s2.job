@@ -1,0 +1,69 @@
+#!/bin/bash -l
+#SBATCH --job-name=lnt-vol-opt
+#SBATCH --time=12:00:00
+#SBATCH --partition=regular
+#SBATCH --qos=short
+#SBATCH --error=slurm_logs/slurm_log_%j.err
+#SBATCH --output=slurm_logs/slurm_log_%j.out
+#SBATCH --nodes=6
+#SBATCH --ntasks-per-node=12
+
+# set up array
+#SBATCH --array=0-5
+
+# set up variables
+OR=$(pwd)
+B='/home/agHeiliger/lauerm/bin'
+vol_devs=(-10 -5 -1 1 5 10)
+
+vol_dev=${vol_devs[$SLURM_ARRAY_TASK_ID]}
+vol_dev_abs=$(( $vol_dev < 0 ? -$vol_dev : $vol_dev ))
+
+if [ $vol_dev -lt 0 ]
+then
+	sym='m'
+else
+	sym='p'
+fi
+
+
+# load modules
+module purge
+module load slurm
+module load ALL-SUBMODULES
+module load agHeiliger
+module load vasp/5.4.4_build01_patch20180516
+
+# print information
+echo "Starting at $(date)"
+
+# Slurm environmental variables
+echo "Step           = 2"
+echo "SLURM_NODELIST = $SLURM_NODELIST"
+echo "SLURM_NNODES   = $SLURM_NNODES"
+echo "SLURM_NPROCS   = $SLURM_NPROCS"
+echo "SLURM_JOB_ID   = $SLURM_JOB_ID"
+echo "SLURM_JOB_NAME = $SLURM_JOB_NAME"
+echo "SLURM_TASK_ID  = $SLURM_TASK_ID"
+
+# activate conda environment
+conda activate sanna
+
+# perform step_1 postprocessing
+calc_path=$(python "$OR/bin/step_2_pre.py" --calc_dir $1 --current_dir "step_2/$sym"_"$vol_dev_abs" --volume_deviation $vol_dev 2>&1 >/dev/null)
+output_path=$(dirname $calc_path)
+
+#move into calc dir and perform vasp calculation
+echo "Directory     = $calc_path"
+cd $calc_path
+srun $B/vasp/vasp_std > output.log
+cd - > /dev/null
+
+echo "Finished at $(date)"
+
+cp "slurm_logs/slurm_log_"$SLURM_JOB_ID"."* $output_path
+
+#postprocessing
+pp_exit=$(python "$OR/bin/step_2_post.py" --root $OR --calc_path $calc_path --slurm_id $SLURM_JOB_ID)
+
+exit 
