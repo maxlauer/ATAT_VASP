@@ -3,37 +3,37 @@ import shutil
 import sys
 import argparse
 
-from preprocessing import prepare_calculation
-
-def set_up_environment(wdir, inp_dir, poscar_file, poscar_dir):
-    #poscar_dir = poscar_file.split('.')[0].replace('sqs', 'conc').replace("POSCAR", "sqs")
-
-    calc_dir = f"{wdir}/{poscar_dir}/step_1/calculation"
-    if not os.path.exists(calc_dir):
-        os.makedirs(calc_dir)
-    
-    poscar = f"{inp_dir}/poscars/{poscar_file}"
-    potcar = f"{inp_dir}/potcars"
-    incar  = f"{inp_dir}/incars/INCAR_step_1"
-    kpoint = f"{inp_dir}/kpoints/KPOINTS"
-
-    prepare_calculation(calc_dir, poscar, potcar, incar, kpoint)
-
+from preprocessing import preprocessing
 
 
 def main():
     parser = argparse.ArgumentParser("Preprocessing Step 1 of the Volume Optimization Workflow")
 
-    parser.add_argument('--calc_dir', dest='calc_dir', default='calc', help='directory in which the calculations are performed')
-    parser.add_argument('--input_dir', dest='inp_dir', default='input', help='The input_file directory')
-    parser.add_argument('--poscar_file', dest='poscar_file', help='Basically the concentration which you want to calculate')
-    parser.add_argument('--current_dir', dest='current_dir', help='The name of the directory to b e created')
+
+    parser.add_argument('--calc_dir', dest='calc_dir',
+                        help='The Directory in which the Calculation is to be performed')
+    parser.add_argument('--step_dir', dest='step_dir', default='step_1',
+                        help='name of the directory in which the calculation of the step is to be performed')
+
+    parser.add_argument('--vasp_dirs', dest='vasp_dirs', nargs=4, default=['incars', 'kpoints', 'poscars', 'potcars'],
+                        help='List of names for the directories containing INCAR, KPOINTS, POSCAR and POTCAR Files (in that order)')
+    parser.add_argument('-p', '--poscar_file', dest='poscar_file', 
+                        help='The path to the POSCAR to be used in the calculation, relative to vasp_dir[2]')
+    
+    parser.add_argument('--input', dest='input', default='input', help='The input_file directory')
+    parser.add_argument('--pretty_incar', dest='pretty', action='store_true',
+                        help='Reproduce Incar supplied by the user. Default - Write Incar in pymatgen style as a simple listing of arguments')
 
     args = parser.parse_args()
 
-    set_up_environment(args.calc_dir, args.inp_dir, args.poscar_file, args.current_dir)
+    preprocessing(calc_path     = args.calc_dir, 
+                  inp_dir       = args.input, 
+                  vasp_dirs     = args.vasp_dirs, 
+                  poscar_path   = args.poscar_file, 
+                  subdir        = args.step_dir, 
+                  pretty        = args.pretty
+                  )
 
 
 if __name__ == '__main__':
-
     main()

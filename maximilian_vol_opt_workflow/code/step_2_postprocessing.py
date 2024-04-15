@@ -1,28 +1,19 @@
 import argparse
 import os
-import shutil
-import sys
 
-import postprocessing as post
+from postprocessing import postprocessing
 
-# start out by checking if the calculation is converged - return sys.exit(1) if not -> afterok doesnt start
-# the go ahead and write out the volume of step 1 into a volumes.out file
-# write energy of step 1 into a energies.out file 
-# write structure into a output/step_1.vasp file
-
-
-# the path given is the path to the calculation environment - the output is to be printed in the parent dir
 
 def write_collective_step_2(outcar, contcar, path):
     firstline=False
     if not os.path.exists(path):
         firstline=True
 
-    
     with open(path, 'a') as out_file:
         if firstline:
             out_file.write("energy,volume\n")
         out_file.write(f"{outcar.final_energy}, {contcar.volume}\n")
+
 
 def main():
     parser = argparse.ArgumentParser("Postprocessing of the initial step for volume optimization")
@@ -33,28 +24,42 @@ def main():
                         help='path in which the calculation is performed')
     parser.add_argument('--slurm_id', dest='sid', 
                         help='Id of the slurm batch job')
+    parser.add_argument('--vasp_log', dest='vasp_log', default='output.log',
+                        help='name of file containing the vasp output. Defaults to output.log')
+    parser.add_argument('--slurm_log', dest='slurm_log', default='slurm_log',
+                        help='name of file containing the slurm output. Defaults to slurm_log and is joined with _--slurm_id.log')
+    
+    parser.add_argument('--data_out', dest='data_file', default='data.out',
+                        help='name of the human inteded out file. Defaults to data.out')
+    parser.add_argument('--data_csv', dest='data_csv', default='data.csv',
+                        help='name of the csv file. Defaults to data.csv')
+    parser.add_argument('--relaxed_str', dest='relaxed_str', default='relaxed_str.vasp',
+                        help='name of the relaxed structure written. Defaults to relaxed_str.vasp')
+    parser.add_argument('--volume_energy_data', dest='vol_en_file', default='s2_volume_energy.csv',
+                        help='name of the relaxed structure written. Defaults to s2_volume_energy.csv')
+    parser.add_argument('--failed', dest='failed', default='failed_runs.out',
+                        help='file containing run paths that didn\'t converge. Defaults to failed_runs.out')
+    
     
     args = parser.parse_args()
 
-    calc_path = args.calc_path
-    out_path = "/".join(args.calc_path.split('/')[0:-1])
-    root = args.root
+    outcar, contcar = postprocessing(root=args.root,
+                                     calc_path=args.calc_path,
+                                     vasp_log=args.vasp_log,
+                                     slurm_log=f"{args.slurm_log}_{args.sid}.out",
+                                     data_file=args.data_file,
+                                     data_csv=args.data_csv,
+                                     failed_file=args.failed
+                                    )
 
-    if not post.check_convergence(f"{calc_path}/output.log"):
-        with open(f"{root}/failed_runs.out") as file:
-            file.write(f"{calc_path}\n")
-        sys.exit(1)
+  
+    step_2_dir = os.path.dirname(os.path.dirname(args.calc_path))
+    
+    # write out volume and total energy plot data
+    write_collective_step_2(outcar=outcar, 
+                            contcar=contcar, 
+                            path= f"{step_2_dir}/{args.vol_en_file}")
 
-    # write out the meta data - how calcs were performed and data was extracted
-    post.write_header(out_path, 'calculation/output.log', f'slurm_log_{args.sid}.out', f"{out_path}/data.out")
-
-    # write out volume and total energy
-    outcar, contcar = post.read_in_vasp_output(calc_path)
-    post.read_out_atom(outcar, contcar, f"{out_path}/data.out", f"{out_path}/data.csv")
-    write_collective_step_2(outcar, contcar, f"{"/".join(args.calc_path.split('/')[0:-2])}/s2_volume_energy.csv")
-    print(f"{"/".join(args.calc_path.split('/')[0:-2])}")
-    #move INCAR
-    post.read_out_structures(calc_path, out_path)
 
 
 if __name__ == '__main__':

@@ -1,5 +1,4 @@
 import os
-import sys
 import shutil
 
 from datetime import datetime, time
@@ -23,6 +22,7 @@ def read_in_meta_data(log_file_path):
         print("There was a problem when reading out the vasp version")
         return None
 
+
     return vasp_version
 
 
@@ -39,11 +39,11 @@ def read_in_slurm_data(slurm_file_path):
     return difference
 
 
-def write_header(base_path, log_file, slurm_file, out_path):
+def write_header(base_path, log_file, slurm_file, out_file_path):
     vasp_version = read_in_meta_data(f"{base_path}/{log_file}")
-    time = read_in_slurm_data(f"{base_path}/{slurm_file}")
+    time = read_in_slurm_data(f"slurm_logs/{slurm_file}")
 
-    with open(f"{base_path}/{out_path}", 'w') as out_file:
+    with open(out_file_path, 'w') as out_file:
         out_file.write("=============================\n")
         out_file.write(f"Calcultions performed\n")
         out_file.write(f"{"With:":<10}{vasp_version}\n")
@@ -60,9 +60,10 @@ def read_out_atom(outcar, contcar, out_file_path_h, out_file_path_csv):
         out_file.write(f"Volume: {contcar.volume} A^3")
 
     with open(out_file_path_csv, 'a') as out_file:
-        out_file.write("property,value,unit\n")
-        out_file.write(f"e_tol,{outcar.final_energy},eV\n")
-        out_file.write(f"volume,{contcar.volume},A^3")
+        out_file.write(f"Total Energy, {outcar.final_energy}, eV\n")
+        out_file.write(f"Volume, {contcar.volume}, A^3")
+
+        
 
 
 def check_convergence(vasp_output_path):
@@ -79,28 +80,3 @@ def read_out_structures(vasp_output_path, output_path):
     shutil.copyfile(f"{vasp_output_path}/CONTCAR", f"{output_path}/relaxed_str.vasp")
     shutil.copyfile(f"{vasp_output_path}/POSCAR", f"{output_path}/input_str.vasp")
     shutil.copyfile(f"{vasp_output_path}/XDATCAR", f"{output_path}/relax_traj.vasp")
-
-
-
-def postprocessing(root, calc_path, vasp_log, slurm_log, data_file, data_csv, failed_file='failed_runs.out'):
-
-    out_path = os.path.dirname(calc_path)
-    calc_dir = os.path.relpath(calc_path, out_path)
-
-
-    if not check_convergence(f"{calc_path}/{vasp_log}"):
-        with open(f"{root}/{failed_file}") as file:
-            file.write(f"{calc_path}\n")
-        sys.exit(1)
-
-    # write out the meta data - how calcs were performed and data was extracted
-    write_header(out_path, f"{calc_dir}/{vasp_log}", slurm_log, data_file)
-
-    # write out volume and total energy
-    outcar, contcar = read_in_vasp_output(calc_path)
-    read_out_atom(outcar, contcar, f"{out_path}/{data_file}", f"{out_path}/{data_csv}")
-
-    #move INCAR
-    read_out_structures(calc_path, out_path)
-
-    return outcar, contcar
