@@ -1,0 +1,661 @@
+ running on   72 total cores
+ distrk:  each k-point on   72 cores,    1 groups
+ distr:  one band on    1 cores,   72 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Mar 05 2020 17:21:05) complex          
+  
+ POSCAR found type information on POSCAR  Li Nb O  Ta
+ POSCAR found :  4 types and      80 ions
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|  ADVICE TO THIS USER RUNNING 'VASP/VAMP'   (HEAR YOUR MASTER'S VOICE ...):  |
+|                                                                             |
+|      You enforced a specific xc-type in the INCAR file,                     |
+|      a different type was found on the POTCAR file                          |
+|          I HOPE YOU KNOW, WHAT YOU ARE  DOING                               |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+ LDA part: xc-table for Pade appr. of Perdew
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+
+
+ VERY BAD NEWS! internal error in subroutine IBZKPT:
+ Reciprocal lattice and k-lattice belong to different class of lattices. Often results are still useful...     168
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.358617518999E+04    0.35862E+04   -0.24388E+05 20736   0.147E+03
+DAV:   2    -0.556962283210E+03   -0.41431E+04   -0.40837E+04 31104   0.450E+02
+DAV:   3    -0.802059282302E+03   -0.24510E+03   -0.24420E+03 31104   0.103E+02
+DAV:   4    -0.812979582397E+03   -0.10920E+02   -0.10911E+02 36288   0.212E+01
+DAV:   5    -0.813207882329E+03   -0.22830E+00   -0.22829E+00 31752   0.207E+00    0.982E+01
+RMM:   6    -0.689387656308E+03    0.12382E+03   -0.70373E+02 23916   0.406E+01    0.450E+01
+RMM:   7    -0.679415397550E+03    0.99723E+01   -0.35009E+01 24984   0.182E+01    0.206E+01
+RMM:   8    -0.679230346840E+03    0.18505E+00   -0.13722E+01 25087   0.597E+00    0.761E+00
+RMM:   9    -0.679151373403E+03    0.78973E-01   -0.22749E+00 32456   0.292E+00    0.265E+00
+RMM:  10    -0.679145383435E+03    0.59900E-02   -0.48557E-01 31988   0.129E+00    0.651E-01
+RMM:  11    -0.679158074781E+03   -0.12691E-01   -0.13829E-01 34448   0.541E-01    0.384E-01
+RMM:  12    -0.679161590914E+03   -0.35161E-02   -0.48914E-02 34400   0.309E-01    0.349E-01
+RMM:  13    -0.679162696545E+03   -0.11056E-02   -0.17109E-02 34484   0.211E-01    0.172E-01
+RMM:  14    -0.679162795804E+03   -0.99259E-04   -0.89684E-03 34179   0.151E-01    0.922E-02
+RMM:  15    -0.679163013586E+03   -0.21778E-03   -0.29632E-03 34781   0.728E-02    0.403E-02
+RMM:  16    -0.679163115576E+03   -0.10199E-03   -0.10399E-03 34754   0.463E-02    0.368E-02
+RMM:  17    -0.679163149828E+03   -0.34252E-04   -0.50331E-04 34289   0.278E-02    0.187E-02
+RMM:  18    -0.679163166975E+03   -0.17147E-04   -0.16727E-04 32631   0.159E-02    0.162E-02
+ num prob  num prob  num prob WARNING in EDDRMM: call to ZHEGV failed, returncode =   6  3      4
+ num prob  num prob  num prob RMM:  19    -0.679163174757E+03   -0.77825E-05   -0.68749E-05 29258   0.106E-02    0.367E-03
+ num prob  num prob  num prob  num prob WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      4
+ num prob  num prob RMM:  20    -0.679163177327E+03   -0.25698E-05   -0.30681E-05 26036   0.728E-03    0.272E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:  21    -0.679163178868E+03   -0.15410E-05   -0.12115E-05 21942   0.538E-03    0.151E-03
+ num prob  num prob  num prob  num prob RMM:  22    -0.679163179598E+03   -0.72971E-06   -0.56756E-06 19351   0.441E-03
+   1 F= -.67916318E+03 E0= -.67916318E+03  d E =-.679163E+03
+ BRION: g(F)=  0.241E+00 g(S)=  0.330E-02
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679343249147E+03   -0.18007E+00   -0.19481E+01 25920   0.992E+00    0.126E+00
+RMM:   2    -0.679384411118E+03   -0.41162E-01   -0.51325E-01 23769   0.177E+00    0.800E-01
+RMM:   3    -0.679378888230E+03    0.55229E-02   -0.34652E-02 25833   0.636E-01    0.579E-01
+RMM:   4    -0.679378820278E+03    0.67952E-04   -0.91742E-03 31355   0.151E-01    0.282E-01
+RMM:   5    -0.679378880609E+03   -0.60331E-04   -0.18103E-03 33640   0.788E-02    0.605E-02
+RMM:   6    -0.679378925579E+03   -0.44970E-04   -0.70337E-04 36313   0.316E-02    0.195E-02
+RMM:   7    -0.679378941729E+03   -0.16150E-04   -0.20095E-04 35739   0.201E-02    0.141E-02
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      2
+RMM:   8    -0.679378949073E+03   -0.73443E-05   -0.75099E-05 33167   0.115E-02    0.300E-03
+ num prob RMM:   9    -0.679378952662E+03   -0.35896E-05   -0.36279E-05 30411   0.847E-03    0.153E-03
+ num prob WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      3
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:  10    -0.679378953729E+03   -0.10670E-05   -0.11539E-05 22536   0.529E-03    0.105E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:  11    -0.679378954374E+03   -0.64417E-06   -0.71165E-06 21784   0.470E-03
+   2 F= -.67937895E+03 E0= -.67937895E+03  d E =-.215775E+00
+ BRION: g(F)=  0.142E+00 g(S)=  0.116E-02 retain N=  1 mean eig= 2.66
+ eig:   2.662
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679381906062E+03   -0.29523E-02   -0.15210E+02 20880   0.277E+01    0.343E+00
+RMM:   2    -0.679713884878E+03   -0.33198E+00   -0.40569E+00 24051   0.497E+00    0.224E+00
+RMM:   3    -0.679664265189E+03    0.49620E-01   -0.25492E-01 26393   0.168E+00    0.168E+00
+RMM:   4    -0.679661488703E+03    0.27765E-02   -0.72863E-02 30672   0.428E-01    0.763E-01
+RMM:   5    -0.679661765647E+03   -0.27694E-03   -0.13014E-02 33459   0.223E-01    0.189E-01
+RMM:   6    -0.679661999218E+03   -0.23357E-03   -0.47913E-03 35957   0.866E-02    0.561E-02
+RMM:   7    -0.679662111117E+03   -0.11190E-03   -0.14044E-03 36856   0.524E-02    0.403E-02
+RMM:   8    -0.679662159695E+03   -0.48578E-04   -0.52827E-04 36584   0.296E-02    0.121E-02
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      4
+RMM:   9    -0.679662180360E+03   -0.20664E-04   -0.21308E-04 35809   0.203E-02    0.303E-03
+ num prob WARNING in EDDRMM: call to ZHEGV failed, returncode =   6  3      4
+RMM:  10    -0.679662188381E+03   -0.80214E-05   -0.86445E-05 32194   0.121E-02    0.411E-03
+ num prob  num prob  num prob RMM:  11    -0.679662192289E+03   -0.39086E-05   -0.37386E-05 29952   0.872E-03    0.229E-03
+ num prob  num prob  num prob  num prob RMM:  12    -0.679662194038E+03   -0.17481E-05   -0.17687E-05 24692   0.616E-03    0.816E-04
+ num prob WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      4
+ num prob  num prob  num prob  num prob  num prob RMM:  13    -0.679662194512E+03   -0.47461E-06   -0.71037E-06 22442   0.498E-03
+   3 F= -.67966219E+03 E0= -.67966219E+03  d E =-.283240E+00
+ BRION: g(F)=  0.222E-01 g(S)=  0.145E-02 retain N=  1 mean eig= 1.99
+ eig:   1.987
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679669619991E+03   -0.74260E-02   -0.22548E+00 26640   0.356E+00    0.478E-01
+RMM:   2    -0.679675450627E+03   -0.58306E-02   -0.76947E-02 24236   0.713E-01    0.314E-01
+RMM:   3    -0.679674882489E+03    0.56814E-03   -0.57404E-03 26713   0.242E-01    0.216E-01
+RMM:   4    -0.679674858830E+03    0.23659E-04   -0.15453E-03 32183   0.663E-02    0.739E-02
+RMM:   5    -0.679674880327E+03   -0.21497E-04   -0.32761E-04 32585   0.304E-02    0.193E-02
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   6  3      2
+RMM:   6    -0.679674888350E+03   -0.80224E-05   -0.10105E-04 34121   0.130E-02    0.529E-03
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      4
+RMM:   7    -0.679674891822E+03   -0.34722E-05   -0.40114E-05 29955   0.872E-03    0.344E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      2
+ num prob  num prob WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      2
+ num prob  num prob  num prob RMM:   8    -0.679928210228E+03   -0.25332E+00   -0.25332E+00 23157   0.565E-03    0.185E+01
+ num prob  num prob  num prob  num prob  num prob RMM:   9    -0.678469573822E+03    0.14586E+01   -0.77951E-06 22886   0.556E-03    0.979E-02
+RMM:  10    -0.678469215547E+03    0.35827E-03   -0.82747E-04 26376   0.428E-02    0.448E-02
+RMM:  11    -0.678469151644E+03    0.63903E-04   -0.14670E-04 26376   0.217E-02    0.275E-02
+RMM:  12    -0.678469128923E+03    0.22721E-04   -0.52316E-05 26155   0.116E-02    0.132E-02
+RMM:  13    -0.678469122189E+03    0.67337E-05   -0.14162E-05 22940   0.734E-03    0.700E-03
+RMM:  14    -0.678469121211E+03    0.97767E-06   -0.59765E-06 13608   0.394E-03
+   4 F= -.67846912E+03 E0= -.67846912E+03  d E =0.119307E+01
+ BRION: g(F)=  0.175E-01 g(S)=  0.778E-03 retain N=  1 mean eig= 4.05
+ eig:   4.054
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679670217688E+03   -0.12011E+01   -0.13807E+01 26496   0.322E+00    0.297E-01
+RMM:   2    -0.679694839270E+03   -0.24622E-01   -0.26056E-01 22754   0.598E-01    0.148E-01
+RMM:   3    -0.679693498661E+03    0.13406E-02   -0.12862E-02 27149   0.192E-01    0.113E-01
+RMM:   4    -0.679693647634E+03   -0.14897E-03   -0.37137E-03 32216   0.485E-02    0.473E-02
+RMM:   5    -0.679693724677E+03   -0.77043E-04   -0.85454E-04 33357   0.252E-02    0.116E-02
+RMM:   6    -0.679693755213E+03   -0.30536E-04   -0.26186E-04 32621   0.103E-02    0.638E-03
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      3
+RMM:   7    -0.679693768354E+03   -0.13141E-04   -0.11034E-04 28020   0.728E-03    0.196E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:   8    -0.679693772843E+03   -0.44891E-05   -0.40029E-05 18322   0.449E-03    0.101E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:   9    -0.679693775090E+03   -0.22470E-05   -0.21287E-05 19562   0.419E-03    0.100E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:  10    -0.679693775938E+03   -0.84820E-06   -0.84910E-06 15389   0.377E-03
+   5 F= -.67969378E+03 E0= -.67969378E+03  d E =-.122465E+01
+ BRION: g(F)=  0.148E-01 g(S)=  0.549E-03 retain N=  1 mean eig= 6.78
+ eig:   6.777
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679712079868E+03   -0.18305E-01   -0.29282E+00 24768   0.370E+00    0.299E-01
+RMM:   2    -0.679716940800E+03   -0.48609E-02   -0.58106E-02 22594   0.584E-01    0.158E-01
+RMM:   3    -0.679716307031E+03    0.63377E-03   -0.32878E-03 25619   0.191E-01    0.933E-02
+RMM:   4    -0.679716183696E+03    0.12333E-03   -0.91436E-04 25547   0.505E-02    0.266E-02
+RMM:   5    -0.679716184565E+03   -0.86916E-06   -0.12119E-04 30539   0.263E-02    0.129E-02
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   6  3      4
+RMM:   6    -0.679716188877E+03   -0.43116E-05   -0.46054E-05 32358   0.813E-03    0.679E-03
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   6  3      4
+ num prob WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      4
+RMM:   7    -0.679716190630E+03   -0.17533E-05   -0.11982E-05 23580   0.563E-03    0.227E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:   8    -0.679716190977E+03   -0.34630E-06   -0.16633E-06 15500   0.392E-03
+   6 F= -.67971619E+03 E0= -.67971619E+03  d E =-.224150E-01
+ BRION: g(F)=  0.116E-01 g(S)=  0.512E-03
+ BRIONS problems: POTIM should be increased
+ retain N=  1 mean eig=15.31
+ eig:  15.313
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679710762222E+03    0.54284E-02   -0.47170E+01 20736   0.148E+01    0.124E+00
+RMM:   2    -0.679791341624E+03   -0.80579E-01   -0.94870E-01 22753   0.235E+00    0.671E-01
+RMM:   3    -0.679781569522E+03    0.97721E-02   -0.57318E-02 25304   0.800E-01    0.373E-01
+RMM:   4    -0.679779658501E+03    0.19110E-02   -0.15477E-02 25511   0.200E-01    0.115E-01
+RMM:   5    -0.679779681114E+03   -0.22613E-04   -0.20805E-03 31485   0.101E-01    0.559E-02
+RMM:   6    -0.679779742587E+03   -0.61472E-04   -0.72760E-04 35937   0.330E-02    0.206E-02
+RMM:   7    -0.679779762478E+03   -0.19891E-04   -0.19531E-04 34860   0.180E-02    0.115E-02
+RMM:   8    -0.679779769300E+03   -0.68224E-05   -0.60284E-05 31385   0.102E-02    0.520E-03
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   6  3      4
+RMM:   9    -0.679779773517E+03   -0.42167E-05   -0.32209E-05 28958   0.790E-03    0.176E-03
+ num prob  num prob RMM:  10    -0.679779774186E+03   -0.66888E-06   -0.88327E-06 21356   0.500E-03
+   7 F= -.67977977E+03 E0= -.67977977E+03  d E =-.635832E-01
+ BRION: g(F)=  0.291E-02 g(S)=  0.340E-03
+ BRIONS problems: POTIM should be increased
+ retain N=  1 mean eig=24.85
+ eig:  24.846
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679745966435E+03    0.33807E-01   -0.39360E+01 20736   0.135E+01    0.116E+00
+RMM:   2    -0.679812612136E+03   -0.66646E-01   -0.79414E-01 22772   0.215E+00    0.626E-01
+RMM:   3    -0.679804030555E+03    0.85816E-02   -0.48705E-02 25349   0.734E-01    0.340E-01
+RMM:   4    -0.679802472264E+03    0.15583E-02   -0.12975E-02 25723   0.184E-01    0.105E-01
+RMM:   5    -0.679802499822E+03   -0.27559E-04   -0.17508E-03 31539   0.913E-02    0.515E-02
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      4
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   6  3      2
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      2
+RMM:   6    -0.679802553481E+03   -0.53659E-04   -0.61388E-04 35597   0.303E-02    0.182E-02
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      3
+RMM:   7    -0.679802570371E+03   -0.16889E-04   -0.16953E-04 33557   0.164E-02    0.107E-02
+RMM:   8    -0.679802576311E+03   -0.59406E-05   -0.51161E-05 30477   0.943E-03    0.449E-03
+ num prob RMM:   9    -0.679802579884E+03   -0.35725E-05   -0.27628E-05 27117   0.727E-03    0.178E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:  10    -0.679802580447E+03   -0.56367E-06   -0.74331E-06 20457   0.489E-03
+   8 F= -.67980258E+03 E0= -.67980258E+03  d E =-.228063E-01
+ BRION: g(F)=  0.309E-03 g(S)=  0.137E-03
+ BRIONS problems: POTIM should be increased
+ retain N=  1 mean eig=22.65
+ eig:  22.647
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679802265123E+03    0.31476E-03   -0.10755E+00 25920   0.223E+00    0.222E-01
+RMM:   2    -0.679803927739E+03   -0.16626E-02   -0.21743E-02 22889   0.356E-01    0.116E-01
+RMM:   3    -0.679803595743E+03    0.33200E-03   -0.12903E-03 26576   0.113E-01    0.596E-02
+RMM:   4    -0.679803550945E+03    0.44798E-04   -0.31520E-04 27358   0.314E-02    0.164E-02
+RMM:   5    -0.679803553055E+03   -0.21097E-05   -0.47278E-05 30237   0.143E-02    0.836E-03
+RMM:   6    -0.679803554589E+03   -0.15346E-05   -0.14163E-05 24049   0.521E-03    0.298E-03
+ num prob WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      4
+ num prob  num prob  num prob  num prob  num prob  num prob RMM:   7    -0.679803555505E+03   -0.91524E-06   -0.74260E-06 20651   0.430E-03
+   9 F= -.67980356E+03 E0= -.67980356E+03  d E =-.975057E-03
+ BRION: g(F)=  0.179E-03 g(S)=  0.751E-04
+ BRIONS problems: POTIM should be increased
+ retain N=  1 mean eig=12.65
+ eig:  12.649
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679802646408E+03    0.90818E-03   -0.97057E-01 22464   0.214E+00    0.229E-01
+RMM:   2    -0.679804145099E+03   -0.14987E-02   -0.20781E-02 23114   0.351E-01    0.119E-01
+RMM:   3    -0.679803802313E+03    0.34279E-03   -0.13643E-03 27164   0.117E-01    0.578E-02
+RMM:   4    -0.679803763904E+03    0.38409E-04   -0.33313E-04 28644   0.311E-02    0.166E-02
+RMM:   5    -0.679803766905E+03   -0.30011E-05   -0.53581E-05 30818   0.146E-02    0.839E-03
+RMM:   6    -0.679803768619E+03   -0.17139E-05   -0.15207E-05 23386   0.526E-03    0.319E-03
+ num prob  num prob  num prob RMM:   7    -0.679803769648E+03   -0.10294E-05   -0.81769E-06 21667   0.439E-03    0.166E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:   8    -0.679803769881E+03   -0.23341E-06   -0.84956E-07 13762   0.290E-03
+  10 F= -.67980377E+03 E0= -.67980377E+03  d E =-.214377E-03
+ BRION: g(F)=  0.143E-03 g(S)=  0.192E-04
+ BRIONS problems: POTIM should be increased
+ retain N=  1 mean eig=10.37
+ eig:  10.369
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679803822433E+03   -0.52785E-04   -0.35460E-02 25920   0.432E-01    0.585E-02
+RMM:   2    -0.679803867824E+03   -0.45391E-04   -0.89897E-04 24652   0.757E-02    0.310E-02
+RMM:   3    -0.679803845737E+03    0.22086E-04   -0.68548E-05 29012   0.238E-02    0.121E-02
+RMM:   4    -0.679803844366E+03    0.13718E-05   -0.17739E-05 29673   0.757E-03    0.348E-03
+ num prob  num prob  num prob  num prob  num prob  num prob RMM:   5    -0.679803844431E+03   -0.65469E-07   -0.17879E-06 14533   0.389E-03
+  11 F= -.67980384E+03 E0= -.67980384E+03  d E =-.745498E-04
+ BRION: g(F)=  0.125E-03 g(S)=  0.649E-05 retain N=  1 mean eig= 7.47
+ eig:   7.465
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679803946891E+03   -0.10252E-03   -0.34895E-02 25920   0.442E-01    0.651E-02
+RMM:   2    -0.679803985332E+03   -0.38442E-04   -0.96291E-04 25209   0.787E-02    0.351E-02
+RMM:   3    -0.679803959443E+03    0.25889E-04   -0.80254E-05 29066   0.255E-02    0.126E-02
+RMM:   4    -0.679803958270E+03    0.11733E-05   -0.21348E-05 30064   0.829E-03    0.395E-03
+ num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob  num prob RMM:   5    -0.679803958437E+03   -0.16676E-06   -0.31110E-06 15927   0.417E-03
+  12 F= -.67980396E+03 E0= -.67980396E+03  d E =-.114005E-03
+ BRION: g(F)=  0.988E-04 g(S)=  0.269E-07 retain N=  1 mean eig= 6.13
+ eig:   6.134
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679804056595E+03   -0.98325E-04   -0.88836E-03 26352   0.216E-01    0.232E-02
+RMM:   2    -0.679804071100E+03   -0.14504E-04   -0.21037E-04 25823   0.354E-02    0.125E-02
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      3
+WARNING in EDDRMM: call to ZHEGV failed, returncode =   8  4      3
+RMM:   3    -0.679804067803E+03    0.32968E-05   -0.13358E-05 24774   0.103E-02    0.610E-03
+RMM:   4    -0.679804067414E+03    0.38866E-06   -0.43580E-06 18302   0.415E-03
+  13 F= -.67980407E+03 E0= -.67980407E+03  d E =-.108977E-03
+ BRION: g(F)=  0.801E-04 g(S)=  0.120E-05 retain N=  1 mean eig= 4.29
+ eig:   4.287
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679804201299E+03   -0.13350E-03   -0.29004E-02 26568   0.375E-01    0.308E-02
+RMM:   2    -0.679804249581E+03   -0.48282E-04   -0.57974E-04 23563   0.560E-02    0.167E-02
+RMM:   3    -0.679804241642E+03    0.79387E-05   -0.27426E-05 25226   0.170E-02    0.101E-02
+RMM:   4    -0.679804240654E+03    0.98794E-06   -0.85106E-06 24390   0.499E-03
+  14 F= -.67980424E+03 E0= -.67980424E+03  d E =-.173240E-03
+ BRION: g(F)=  0.530E-04 g(S)=  0.471E-05 retain N=  1 mean eig= 3.20
+ eig:   3.202
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679804343934E+03   -0.10229E-03   -0.27279E-02 25992   0.355E-01    0.260E-02
+RMM:   2    -0.679804386983E+03   -0.43049E-04   -0.49936E-04 22706   0.513E-02    0.143E-02
+RMM:   3    -0.679804381424E+03    0.55581E-05   -0.24881E-05 23236   0.179E-02    0.918E-03
+RMM:   4    -0.679804380581E+03    0.84338E-06   -0.90164E-06 22156   0.485E-03
+  15 F= -.67980438E+03 E0= -.67980438E+03  d E =-.139927E-03
+ BRION: g(F)=  0.356E-04 g(S)=  0.799E-05 retain N=  1 mean eig= 0.24
+ eig:   0.242
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679804461727E+03   -0.80303E-04   -0.20432E-02 25344   0.306E-01    0.263E-02
+RMM:   2    -0.679804493202E+03   -0.31475E-04   -0.38932E-04 22927   0.462E-02    0.137E-02
+RMM:   3    -0.679804488179E+03    0.50234E-05   -0.21190E-05 23944   0.147E-02    0.772E-03
+RMM:   4    -0.679804487299E+03    0.87971E-06   -0.61634E-06 20377   0.438E-03
+  16 F= -.67980449E+03 E0= -.67980449E+03  d E =-.106718E-03
+ BRION: g(F)=  0.245E-04 g(S)=  0.795E-05
+ BRIONS problems: POTIM should be increased
+ retain N=  1 mean eig= 9.95
+ eig:   9.951
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679804486357E+03    0.18220E-05   -0.15055E-01 22752   0.832E-01    0.753E-02
+RMM:   2    -0.679804718010E+03   -0.23165E-03   -0.29402E-03 22897   0.129E-01    0.388E-02
+RMM:   3    -0.679804681020E+03    0.36990E-04   -0.17729E-04 25729   0.427E-02    0.212E-02
+RMM:   4    -0.679804675585E+03    0.54356E-05   -0.49566E-05 26357   0.114E-02    0.599E-03
+RMM:   5    -0.679804675545E+03    0.39319E-07   -0.52121E-06 18829   0.593E-03
+  17 F= -.67980468E+03 E0= -.67980468E+03  d E =-.188246E-03
+ BRION: g(F)=  0.973E-05 g(S)=  0.491E-05
+ BRIONS problems: POTIM should be increased
+ retain N=  1 mean eig=18.82
+ eig:  18.820
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679804689829E+03   -0.14244E-04   -0.20372E-02 24912   0.309E-01    0.328E-02
+RMM:   2    -0.679804719673E+03   -0.29845E-04   -0.43049E-04 23993   0.492E-02    0.169E-02
+RMM:   3    -0.679804711504E+03    0.81692E-05   -0.26960E-05 26649   0.150E-02    0.832E-03
+RMM:   4    -0.679804710453E+03    0.10514E-05   -0.75304E-06 24076   0.492E-03    0.226E-03
+ num prob RMM:   5    -0.679804710400E+03    0.52598E-07   -0.57872E-07 12419   0.261E-03
+  18 F= -.67980471E+03 E0= -.67980471E+03  d E =-.348545E-04
+ BRION: g(F)=  0.788E-05 g(S)=  0.271E-05
+ BRIONS problems: POTIM should be increased
+ retain N=  1 mean eig=11.32
+ eig:  11.321
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679804711008E+03   -0.55549E-06   -0.27089E-02 24624   0.359E-01    0.414E-02
+RMM:   2    -0.679804747074E+03   -0.36066E-04   -0.57190E-04 23742   0.583E-02    0.212E-02
+RMM:   3    -0.679804735705E+03    0.11369E-04   -0.38841E-05 27170   0.181E-02    0.975E-03
+RMM:   4    -0.679804734419E+03    0.12864E-05   -0.99424E-06 25702   0.560E-03    0.281E-03
+RMM:   5    -0.679804734349E+03    0.69354E-07   -0.66112E-07 12487   0.284E-03
+  19 F= -.67980473E+03 E0= -.67980473E+03  d E =-.239495E-04
+ BRION: g(F)=  0.730E-05 g(S)=  0.646E-06
+ BRIONS problems: POTIM should be increased
+ retain N=  1 mean eig=10.35
+ eig:  10.349
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679804740491E+03   -0.60725E-05   -0.34051E-03 25920   0.130E-01    0.161E-02
+RMM:   2    -0.679804744595E+03   -0.41040E-05   -0.77345E-05 25038   0.219E-02    0.836E-03
+RMM:   3    -0.679935898209E+03   -0.13115E+00   -0.13116E+00 18766   0.657E-03    0.267E+01
+RMM:   4    -0.679456674723E+03    0.47922E+00   -0.24658E-06 14771   0.511E-03    0.748E-02
+RMM:   5    -0.679456482608E+03    0.19212E-03   -0.58981E-04 26162   0.389E-02    0.425E-02
+RMM:   6    -0.679456455642E+03    0.26965E-04   -0.57577E-05 24992   0.174E-02    0.283E-02
+RMM:   7    -0.679456449480E+03    0.61626E-05   -0.42105E-05 24378   0.116E-02    0.170E-02
+RMM:   8    -0.679456448170E+03    0.13100E-05   -0.73846E-06 19970   0.692E-03    0.178E-02
+RMM:   9    -0.679456447870E+03    0.29936E-06   -0.34323E-06 13111   0.334E-03
+  20 F= -.67945645E+03 E0= -.67945645E+03  d E =0.348286E+00
+ BRION: g(F)=  0.230E-03 g(S)=  0.121E-04 retain N=  1 mean eig= 0.84
+ eig:   0.839
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679795624016E+03   -0.33918E+00   -0.33946E+00 25776   0.124E-01    0.808E-02
+RMM:   2    -0.679803315014E+03   -0.76910E-02   -0.79135E-02 26387   0.571E-02    0.444E-02
+RMM:   3    -0.679804471164E+03   -0.11562E-02   -0.15644E-02 24820   0.201E-02    0.252E-02
+RMM:   4    -0.679804677654E+03   -0.20649E-03   -0.22596E-03 24344   0.119E-02    0.852E-03
+RMM:   5    -0.679804712556E+03   -0.34901E-04   -0.42948E-04 18825   0.659E-03    0.453E-03
+RMM:   6    -0.679804731211E+03   -0.18655E-04   -0.19840E-04 12593   0.334E-03    0.214E-03
+RMM:   7    -0.679804736417E+03   -0.52063E-05   -0.61587E-05 12406   0.244E-03    0.101E-03
+RMM:   8    -0.679804739229E+03   -0.28115E-05   -0.29507E-05 12351   0.171E-03    0.528E-04
+RMM:   9    -0.679804740156E+03   -0.92674E-06   -0.10447E-05 12199   0.134E-03    0.309E-04
+RMM:  10    -0.679804740618E+03   -0.46242E-06   -0.49256E-06 10128   0.926E-04
+  21 F= -.67980474E+03 E0= -.67980474E+03  d E =-.348293E+00
+ BRION: g(F)=  0.633E-05 g(S)=  0.360E-06 retain N=  1 mean eig= 0.67
+ eig:   0.669
+ bond charge predicted
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1    -0.679804744821E+03   -0.46657E-05   -0.34649E-04 28296   0.429E-02    0.367E-03
+RMM:   2    -0.679804745453E+03   -0.63192E-06   -0.74733E-06 19458   0.719E-03    0.187E-03
+RMM:   3    -0.679804745428E+03    0.25437E-07   -0.37844E-07 10657   0.242E-03    0.106E-03
+RMM:   4    -0.679804745446E+03   -0.18059E-07   -0.18199E-07 10657   0.128E-03
+  22 F= -.67980475E+03 E0= -.67980475E+03  d E =-.482786E-05
+ BRION: g(F)=  0.556E-05 g(S)=  0.277E-06 retain N=  1 mean eig= 5.60
+ eig:   5.599
+ reached required accuracy - stopping structural energy minimisation

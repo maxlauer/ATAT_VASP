@@ -37,7 +37,7 @@ def main():
     
     parser.add_argument('--vasp_dirs', dest='vasp_dirs', nargs=4, default=['incars', 'kpoints', 'poscars', 'potcars'],
                         help='List of names for the directories containing INCAR, KPOINTS, POSCAR and POTCAR Files (in that order)')
-    parser.add_argument('--template', dest='template', default='/home/mlauer/Documents/work/sanna/florian_git/maximilian_vol_opt_workflow/set_up_template',
+    parser.add_argument('--template', dest='template', default='/home/agHeiliger/lauerm/templates/vol_opt',
                         help='List of names for the directories containing INCAR, KPOINTS, POSCAR and POTCAR Files (in that order)')
      
  
@@ -46,7 +46,7 @@ def main():
     args = parser.parse_args()
 
     # copy environment template in current template
-    shutil.copytree(args.template, './tmp')
+    shutil.copytree(args.template, './tmp', symlinks=True)
     os.system('mv tmp/* . && rm -r tmp')
 
     # set up the general directories in the input directory

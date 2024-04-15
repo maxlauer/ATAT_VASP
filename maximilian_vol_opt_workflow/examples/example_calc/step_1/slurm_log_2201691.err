@@ -1,0 +1,4 @@
+MODULE: Adding module /shared/modulefiles-compilers/gcc/8.4.0
+MODULE: Adding module /shared/modulefiles-compilers/intel/2019/compilers+mkl
+MODULE: Adding module /home/agHeiliger/shared/modulefiles/openmpi-local/3.1.5/intel/2019
+MODULE: Adding module /home/agHeiliger/shared/modulefiles/vasp/5.4.4_build01_patch20180516

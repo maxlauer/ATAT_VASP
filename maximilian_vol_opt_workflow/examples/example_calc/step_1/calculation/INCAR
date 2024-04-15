@@ -1,0 +1,58 @@
+
+## ============================================ ##
+## System name
+SYSTEM = Li(NbTa)O_3
+
+## ============================================ ##
+## Precision paramters
+PREC     = Accurate
+NWRITE   =    0
+ENCUT    =   475    # Value taken from Florain
+LREAL    =    A     # eval of projection operators in real space, A-Auto, Auto is recommended for > 30 atoms (otherwise .FALSE.
+                    # reccomended to use ROPT with LREAL - default value is PREC dependent - conv. tests for ROPT recommended
+
+#Functional
+GGA      = PS       # PBEsol - better for lattice constants
+## ============================================= ##
+
+
+## ============================================= ##
+## Starting Paramters
+ICHARG   =    2     # determines how initial charge densitiy is determined - for ISTART = 0 --> 2 - atomic charges
+ISTART   =    0     # determines orbital initialization - 0: orbitals from INIWAV; 1: orbitals from WAVECAR
+INIWAV   =    1     # 0 - jellium orbitals; 1 - KS-orbitals filled with random numbers (reccomended0
+## ============================================= ##
+
+
+## ============================================= ##
+## Electronic step
+EDIFF    =  1.E-6   # SCF accuracy (eV)
+NELMIN   =   4      # recommended for some ionic-min-methods instead of default - min num el steps
+NELM     =  1000    # max num el. steps
+# IALGO  -          # 38 - Davidson (more robust); 48 - $RMM-DIIS (faster)
+ALGO     =  Fast    #  combines NELMDL steps with Davidson then RMM-DIIS
+ISMEAR   =   -5     # rec for semicond.
+SIGMA    =  0.05    # irrelevant for ISMEAR = -5
+AMIX     =   0.4    # smaller value than default (0.8 for ISPIN=1) for metals
+AMIN     =   0.1    # basically default
+## ============================================= ##
+
+
+## ============================================= ##
+## Ionic step
+NSW     =   200     # max ionic steps
+IBRION  =    1      # RMM-DIIS algo for ionic step
+EDIFFG  =   -0.005  # threshold ionic step (eV)
+POTIM   =   0.15    # sacling for steps, IBRION=1|3specially sensitive
+ISIF    =    3      # full relaxation of - forces, stress, position, cell, shape and volume
+## ============================================= ##
+
+
+## ============================================= ##
+## Output
+LWAVE   = .FALSE.   #  Write the wave functions (WAVECAR) 
+LCHARG  = .FALSE.   #  Write the charge densities (CHG, CHGCAR)
+LVTOT   = .FALSE.   #  Write the total local potential (LOCPOT)
+LVHAR   = .FALSE.   #  Write the Hartree potential (LOCPOT)
+LELF    = .FALSE.   #  Write the electron localisation function (ELFCAR)
+## ============================================= ##

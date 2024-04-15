@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --job-name=lnt-vol-opt
+#SBATCH --job-name=step_2-lnt-vol-opt
 #SBATCH --time=12:00:00
 #SBATCH --partition=regular
 #SBATCH --qos=short
@@ -17,15 +17,6 @@ B='/home/agHeiliger/lauerm/bin'
 vol_devs=(-10 -5 -1 1 5 10)
 
 vol_dev=${vol_devs[$SLURM_ARRAY_TASK_ID]}
-vol_dev_abs=$(( $vol_dev < 0 ? -$vol_dev : $vol_dev ))
-
-if [ $vol_dev -lt 0 ]
-then
-	sym='m'
-else
-	sym='p'
-fi
-
 
 # load modules
 module purge
@@ -50,7 +41,7 @@ echo "SLURM_TASK_ID  = $SLURM_TASK_ID"
 conda activate sanna
 
 # perform step_1 postprocessing
-calc_path=$(python "$OR/bin/step_2_pre.py" --calc_dir $1 --current_dir "step_2/$sym"_"$vol_dev_abs" --volume_deviation $vol_dev 2>&1 >/dev/null)
+calc_path=$(python "$OR/bin/step_2_pre.py" --calc_dir $1 --volume_deviation $vol_dev 2>&1 >/dev/null)
 output_path=$(dirname $calc_path)
 
 #move into calc dir and perform vasp calculation

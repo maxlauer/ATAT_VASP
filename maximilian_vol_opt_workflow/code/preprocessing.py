@@ -9,7 +9,6 @@ from pymatgen.core.structure import Structure
 from pymatgen.io.vasp import Incar
 
 
-
 def change_poscar_volume(poscar_path, volume, vol_dev=0, change_name=False):
     '''
     read in the poscar file and change it's volume to volume * (1+vol_dev)

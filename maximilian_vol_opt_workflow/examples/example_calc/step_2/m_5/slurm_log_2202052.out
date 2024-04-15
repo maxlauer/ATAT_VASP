@@ -1,0 +1,10 @@
+Starting at Mi 10. Apr 19:41:14 CEST 2024
+Step           = 2
+SLURM_NODELIST = node2-[032,158,163,169,175,179]
+SLURM_NNODES   = 6
+SLURM_NPROCS   = 72
+SLURM_JOB_ID   = 2202052
+SLURM_JOB_NAME = lnt-vol-opt
+SLURM_TASK_ID  = 
+Directory     = /scratch/agHeiliger/lauerm/sanna/vol_opt_lnt/calc/conc_06/sqs_2/step_2/m_5/calculation
+Finished at Mi 10. Apr 21:14:37 CEST 2024

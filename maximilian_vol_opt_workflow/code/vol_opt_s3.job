@@ -1,12 +1,12 @@
 #!/bin/bash -l
-#SBATCH --job-name=lnt-vol-opt
-#SBATCH --time=12:00:0
+#SBATCH --job-name=step_3-lnt-vol-opt
+#SBATCH --time=12:00:00
 #SBATCH --partition=regular
 #SBATCH --qos=short
 #SBATCH --error=slurm_logs/slurm_log_%j.err
 #SBATCH --output=slurm_logs/slurm_log_%j.out
 #SBATCH --nodes=4
-#SBATCH --ntasks-per-node=24
+#SBATCH --ntasks-per-node=12
 
 # Set up Variables
 OR=$(pwd)

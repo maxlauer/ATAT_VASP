@@ -61,7 +61,7 @@ def extract_initial_guess(inital_opt_path, data_file, bulk_mod_guess: float = 10
 
     F0_guess = read_out_prev_calculation(calc_dir   = inital_opt_path, 
                                          data_file  = data_file, 
-                                         prop       = "e_tol")
+                                         prop       = "e_tot")
     V0_guess = read_out_prev_calculation(calc_dir   = inital_opt_path, 
                                          data_file  = data_file, 
                                          prop       = "volume")

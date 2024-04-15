@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --job-name=lnt-vol-opt
+#SBATCH --job-name=step_1-lnt-vol-opt
 #SBATCH --time=12:00:00
 #SBATCH --partition=regular
 #SBATCH --qos=short
@@ -41,7 +41,8 @@ echo "SLURM_JOB_NAME = $SLURM_JOB_NAME"
 conda activate sanna
 
 #perform step_1 preprocessing
-calc_path=$(python "$OR/bin/step_1_pre.py" --poscar_file $1 --current_dir $output 2>&1 >/dev/null)
+echo $output
+calc_path=$(python "$OR/bin/step_1_pre.py" --calc_dir $output --poscar_file $1 2>&1 >/dev/null)
 output_path=$(dirname $calc_path)
 
 #move into the calc directory to performe vasp calculation

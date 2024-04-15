@@ -56,12 +56,12 @@ def write_header(base_path, log_file, slurm_file, out_path):
 def read_out_atom(outcar, contcar, out_file_path_h, out_file_path_csv):
 
     with open(out_file_path_h, 'a') as out_file:
-        out_file.write(f"Total Energy: {outcar.final_energy} eV\n")
-        out_file.write(f"Volume: {contcar.volume} A^3")
+        out_file.write(f"e_tot: {outcar.final_energy} eV\n")
+        out_file.write(f"volume: {contcar.volume} A^3")
 
     with open(out_file_path_csv, 'a') as out_file:
         out_file.write("property,value,unit\n")
-        out_file.write(f"e_tol,{outcar.final_energy},eV\n")
+        out_file.write(f"e_tot,{outcar.final_energy},eV\n")
         out_file.write(f"volume,{contcar.volume},A^3")
 
 
