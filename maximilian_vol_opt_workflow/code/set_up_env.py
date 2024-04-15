@@ -25,7 +25,7 @@ def main():
     # if Volume is not supplied then INCAR or INCAR_step_1 will be used with a changed ISIF = 3 instead of the one supplied
 
     parser.add_argument('--input', dest='input', default='input', 
-                        help='Directory containing incars,kpoints,potcars and poscars')
+                        help='Directory containing incars,kpoints,potcars and poscars - Defaults to')
     parser.add_argument('--zipfile', dest='zipfile', default='lat_ins.zip',
                         help='zip-file containing directory \"finished\" with mcsqs files or poscar files')
     parser.add_argument('--mcsqs_file_name', dest='mcsqs_path', default='best_sqs.out',
@@ -37,10 +37,17 @@ def main():
     
     parser.add_argument('--vasp_dirs', dest='vasp_dirs', nargs=4, default=['incars', 'kpoints', 'poscars', 'potcars'],
                         help='List of names for the directories containing INCAR, KPOINTS, POSCAR and POTCAR Files (in that order)')
+    parser.add_argument('--template', dest='template', default='/home/mlauer/Documents/work/sanna/florian_git/maximilian_vol_opt_workflow/set_up_template',
+                        help='List of names for the directories containing INCAR, KPOINTS, POSCAR and POTCAR Files (in that order)')
      
+ 
 
     global args 
     args = parser.parse_args()
+
+    # copy environment template in current template
+    shutil.copytree(args.template, './tmp')
+    os.system('mv tmp/* . && rm -r tmp')
 
     # set up the general directories in the input directory
     set_up_input(args.input, args.vasp_dirs)
@@ -131,6 +138,4 @@ def check_dir(path):
 
 
 if __name__ == '__main__':
-    input_path = "sqs_vol_opt" 
-    os.chdir(input_path)
     main()    
