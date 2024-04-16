@@ -33,7 +33,7 @@ def write_potcar(potcar_dir, order, output_dir):
             sys.exit(1)
         
         potcar_order += f"{potcar_dir}/POTCAR_{el} "
-    
+    print(potcar_order)
     os.system(f'cat {potcar_order} >> {output_dir}/POTCAR')
 
 
@@ -84,8 +84,13 @@ def prepare_vasp_calculation(calc_dir, input_files, pretty=False):
             ret_bool = float(scale) > 0
                 
         structure = Structure.from_file(filename=poscar_path)
-        order = np.unique([ el.symbol for el in structure.species ])
-        
+        species = [ el.symbol for el in structure.species ]
+
+        order = []
+        for el in species:
+            if el not in order:
+                order.append(el)
+
         return ret_bool, order
 
 
